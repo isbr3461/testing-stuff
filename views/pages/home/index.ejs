@@ -1,39 +1,19 @@
 <!DOCTYPE html>
-import logo from '../../icons/logo.png';
-import title from '../../icons/title2.png';
-import play from '../../icons/playButton.png'
-import settings from '../../icons/settingsButton.png'
-import style from '../home/styles.module.css'
+
 <html>
 <head>
-            <link rel="icon" href={logo}/>
-            <title>Don't Drown</title>
-            {/* <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/> */}
 
+
+            <link rel="stylesheet" href="styles.module.css">
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 </head>
 
 <body>
 
-  <div className={style.body}>
-              <body>
-                  <img src={title}/>
-
-                  <p>
-                      welcome!
-                  </p>
-                  <div onClick={() => {
-                      console.log("game begins")
-                  }}>
-                      <img src={play}/>
-                  </div>
-
-                  <img src={settings} onClick={() => {
-                      setScreenNav('settings')
-                  }}/>
-              </body>
-          </div>
+    <div class="container">
+      <img src = "title2.png">
+    </div>
 
 </body>
 </html>
