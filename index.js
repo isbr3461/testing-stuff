@@ -17,7 +17,7 @@ express()
   .get('/', (req, res) => res.render('pages/home/index'))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
-  .get('/db', async (req, res) => {
+  express().get('/db', async (req, res) => {
     try {
       const client = await pool.connect();
       const result = await client.query('SELECT * FROM test_table');
