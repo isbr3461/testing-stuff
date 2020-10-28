@@ -14,7 +14,10 @@ express()
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
-  .get('/db', async (req, res) => {
+  .get('/', (req, res) => res.render('pages/home/index'))
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+
+  express().get('/db', async (req, res) => {
     try {
       const client = await pool.connect();
       const result = await client.query('SELECT * FROM test_table');
@@ -26,4 +29,3 @@ express()
       res.send("Error " + err);
     }
   })
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
